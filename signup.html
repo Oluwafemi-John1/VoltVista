@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <h1 id="header">Resgister</h1>
+    <p class="Top">Create Your New account</p>
+    <br>
+          <!-- INPUT  -->
+     <div class="inp">
+       <div>
+         <img src="icon7.svg" alt="" class="view2">
+         <input type="text" placeholder="Full Name" class="view">
+       </div>
+   
+       <div>
+         <img src="icon2.svg" alt="" class="email">
+         <input type="email" placeholder="User@gmail.com" class="view">
+       </div>
+   
+       <div>
+         <img src="icon5.svg" alt="" class="pword">
+         <img src="icon6 (1).svg" alt="" class="pim">
+         <input type="password" placeholder="password" class="view">
+       </div>
+       
+       <div>
+         <img src="icon5.svg" alt="" class="pwords">
+         <img src="icon6 (1).svg" alt="" class="pim2">
+         <input type="password" placeholder="Confirm password" class="view">
+       </div>
+       <br>
+       <button id="btn" onclick="Signup()">Sign Up</button>
+      </div>
+   
+           <br>
+         <div id="orDivider">
+           <hr>
+           <span>or</span>
+           <hr>
+         </div>
+         <br>
+         <div class="flex">
+           <div>
+          <img src="icon4.svg" alt="" class="pic1">
+           </div>
+           <div>
+            <img src="icon3.svg" alt="" class="pic2">
+           </div>
+         </div>
+         <p class="last">Already have an account? <a href="">Sign in</a></p>
+           
+     </div>
+   
+
+
+
+
+  
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+   
+    const firebaseConfig = {
+      apiKey: "AIzaSyAf1z68jUXac96AdjrxfXBSKicuIDlv5Do",
+      authDomain: "voltvista-989f9.firebaseapp.com",
+      projectId: "voltvista-989f9",
+      storageBucket: "voltvista-989f9.appspot.com",
+      messagingSenderId: "1037246429311",
+      appId: "1:1037246429311:web:1d5cef734e17fdcb6ae74a",
+      measurementId: "G-969KPVYK87"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app)
+  </script>
+</body>
+</html>
