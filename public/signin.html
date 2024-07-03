@@ -3,11 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>VoltVista</title>
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="sigin.css">
 </head>
 <body>
-  <h1>Sign In</h1>
-
+    <body>
+        <div>
+          <div class="mt-3">
+            <img src="images/iconamoon_arrow-up-2.svg" alt="" class="BackIcon" />
+          </div>
+          <div class="mx-auto text-center">
+            <img src="images/VectorVoltVista.svg" alt="" class="voltvista" />
+          </div>
+          <img src="images/image 3.png" class="WelcomeImage" alt="" />
+      
+          <section>
+            <h1>Welcome&nbsp;back</h1>
+            <p>Login&nbsp;to&nbsp;your&nbsp;account</p>
+            <div>
+              <input type="text" class="UserName" placeholder="User@gmail.com" id="email" />
+              <img src="images/Vector.svg" alt="" class="username-image" />
+            </div>
+      
+            <div class="password-input">
+              <img src="images/Vector (2).svg" alt="" class="EyeOnly" />
+              <img src="images/Vector (1).svg" alt="" class="password-image" />
+              <input type="text" placeholder="Password" class="UserName" id="password" />
+            </div>
+      
+            <div class="forgot-password">
+              <label for=""><input type="checkbox" />Remember me</label>
+              <a href="" class="anchor">Forgot&nbsp;Password?</a>
+            </div>
+      
+            <button onclick="SignInBtn()" class="mx-auto d-flex">Sign in</button>
+      
+            <div class="SignUp-link">
+              <p>Don't have an account?<a href="#">Sign up</a></p>
+            </div>
+          </section>
+        </div>
+        <div id="display"></div>
+      
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
