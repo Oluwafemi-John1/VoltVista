@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #header{
+     padding-left: 36rem;
+     font-weight: 100px;
+     color: #0B6186;
+    }
+  
+    #btn{
+      width: 420px;
+      height: 50px;
+      border-radius: 9px;
+      border: 0;
+      background-color: #0B6186;
+      color: #f8fafc;
+      font-size: large;
+    } 
+     .view{
+     width: 370px;
+     height: 35px;
+     border-radius: 10px;
+     outline: none;
+     border:2px solid #0B6186;
+     padding: 2px 10px 10px 35px;
+     margin-top: 30px;
+     }
+     ::placeholder{
+      position: absolute;
+      top: 18px;
+      color: #0B6186;
+     }
+  
+     .view2{
+      position: absolute;
+      left: 470px;
+      top: 182px;
+     }
+     .email{
+      position: absolute;
+      left: 470px;
+      top: 264px;
+     }
+     .pword{
+      position: absolute;
+      left: 470px;
+      top: 345px;
+     }
+     .pwords{
+      position: absolute;
+      left: 470px;
+      top: 426px;
+     }
+     
+     .inp{
+      padding-left: 450px;
+     }
+     
+     /* #hr{
+      height: 3px;
+      background-color: gray;
+      border: 0;
+      border-radius: 3px;
+      width: 350px;
+      margin-left: 490px;
+     } */
+  
+     .flex{
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+     }
+  
+     .pic1{
+      padding-left: 35pc;
+     }
+  
+     .pic2{
+      padding-right: 35pc;
+     }
+  
+     .last{
+      font-size: large;
+      font-weight: 500px;
+      margin-left: 500px;
+      color: #9B9999;
+     }
+     .Top{
+      margin-left: 550px;
+      font-size: large;
+      color: #9B9999;
+     }
+     .pim{
+      position: absolute;
+      right: 480px;
+      top: 345px;
+     }
+     .pim2{
+      position: absolute;
+      right: 480px;
+      top: 426px;
+     }
+     #orDivider{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
+     }
+  
+     #orDivider hr{
+       flex: 1;
+       border: none;
+       height: 1px;
+       background-color: #ccc;
+       margin: 0 10px;
+     }
+  
+     #orDivider span{
+      color: #999;
+      font-size: 14px;
+      text-transform: uppercase;
+     }
