@@ -17,6 +17,10 @@ body {
       color: #f8fafc;
       font-size: large;
     } 
+
+    /* .onc:hover{
+      background-color: gray;
+    } */
      .view{
      width: 370px;
      height: 35px;
