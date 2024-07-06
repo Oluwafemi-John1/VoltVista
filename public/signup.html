@@ -4,113 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
   <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <h1 id="header">Resgister</h1>
-    <p class="Top">Create Your New account</p>
-    <br>
-          <!-- INPUT  -->
-     <div class="inp">
-       <div>
-         <img src="img signup/icon7.svg" alt="" class="view2">
-         <input type="text" placeholder="Full Name" class="view">
-       </div>
-   
-       <div>
-         <img src="img signup/icon2.svg" alt="" class="email">
-         <input type="email" placeholder="User@gmail.com" class="view">
-       </div>
-   
-       <div>
-         <img src="img signup/icon5.svg" alt="" class="pword">
-         <img src="img signup/icon6 (1).svg" alt="" class="pim">
-         <input type="password" placeholder="password" class="view">
-       </div>
-       
-       <div>
-         <img src="img signup/icon5.svg" alt="" class="pwords">
-         <img src="img signup/icon6 (1).svg" alt="" class="pim2">
-         <input type="password" placeholder="Confirm password" class="view">
-       </div>
-       <br>
-       <button id="btn" onclick="Signup()">Sign Up</button>
+ <div class="container-fluid">
+   <h1 id="header">Resgister</h1>
+   <p class="Top">Create Your New account</p>
+    
+   <!-- INPUT  -->
+   <form class="form">
+      <div class="input-box">
+       <img src="img signup/icon7.svg" alt="" class="nameIcon">
+       <input type="text" placeholder="Full Name" >
       </div>
-   
-           <br>
-         <div id="orDivider">
-           <hr>
-           <span>or</span>
-           <hr>
-         </div>
-         <br>
-         <div class="flex">
-           <div onclick="signGoogle()" class="onc">
-           <img src="img signup/icon4.svg" alt="" class="pic1">
-           </div>
-           <div>
-            <img src="img signup/icon3.svg" alt="" class="pic2">
-           </div>
-         </div>
-         <p class="last">Already have an account? <a href="" onclick="signin()">Sign in</a></p>
-           
+  
+      <div class="input-box">
+        <img src="img signup/icon2.svg" alt="" class="email">
+        <input type="text" placeholder="User@gmail.com" class="box">
+      </div>
+  
+      <div class="input-box">
+        <img src="img signup/icon5.svg" alt="" class="pword">
+        <input type="text" placeholder="Password" class="box">
+        <!-- <img src="img signup/icon6 (1).svg" alt="" class=""> -->
+      </div>
+
+     <div class="input-box">
+       <img src="img signup/icon5.svg" alt="" class="pwords">
+       <input type="text" placeholder="Confirm password" class="box">
      </div>
-   
+     <button type="button" class="sign" onclick="Signup()">Sign Up</button>
+    </form>
+  </div>
 
+  
+ 
+  <div id="orDivider">
+    <hr>
+    <span>or</span>
+    <hr>
+  </div>
+  
+  <div class="flex">
+    <div onclick="signGoogle()" class="onc">
+      <img src="img signup/icon4.svg" alt="" class="pic1">
+    </div>
 
-
+    <div>
+     <img src="img signup/icon3.svg" alt="" class="pic2">
+    </div>
+  </div>
+  <p class="last">Already have an account? <a href="signin.html" onclick="signin()">Sign in</a></p>
+           
+    
+ <!-- SCRIPT  -->
 
   
 
-     <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
-      import {
-        getAuth,
-        signInWithPopup,
-        GoogleAuthProvider,
-      } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
+  <script type="module">
+   // Import the functions you need from the SDKs you need
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+   import {
+     getAuth,
+     signInWithPopup,
+     GoogleAuthProvider,
+   } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyAf1z68jUXac96AdjrxfXBSKicuIDlv5Do",
-        authDomain: "voltvista-989f9.firebaseapp.com",
-        projectId: "voltvista-989f9",
-        storageBucket: "voltvista-989f9.appspot.com",
-        messagingSenderId: "1037246429311",
-        appId: "1:1037246429311:web:1d5cef734e17fdcb6ae74a",
-        measurementId: "G-969KPVYK87",
-      };
+   const firebaseConfig = {
+     apiKey: "AIzaSyAf1z68jUXac96AdjrxfXBSKicuIDlv5Do",
+     authDomain: "voltvista-989f9.firebaseapp.com",
+     projectId: "voltvista-989f9",
+     storageBucket: "voltvista-989f9.appspot.com",
+     messagingSenderId: "1037246429311",
+     appId: "1:1037246429311:web:1d5cef734e17fdcb6ae74a",
+     measurementId: "G-969KPVYK87",
+   };
 
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      const provider = new GoogleAuthProvider();
+   // Initialize Firebase
+   const app = initializeApp(firebaseConfig);
+   const auth = getAuth(app);
+   const provider = new GoogleAuthProvider();
 
-      const signGoogle = () => {
-        console.log("Google sign-in button clicked");
-        signInWithPopup(auth, provider)
-          .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            const user = result.user;
-            console.log("User signed in:", user);
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.customData.email;
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            console.error(
-              "Error during sign-in:",
-              errorCode,
-              errorMessage,
-              email,
-              credential
-            );
+   const signGoogle = () => {
+     console.log("Google sign-in button clicked");
+     signInWithPopup(auth, provider)
+       .then((result) => {
+         const credential = GoogleAuthProvider.credentialFromResult(result);
+         const token = credential.accessToken;
+         const user = result.user;
+         console.log("User signed in:", user);
+       })
+       .catch((error) => {
+         const errorCode = error.code;
+         const errorMessage = error.message;
+         const email = error.customData.email;
+         const credential = GoogleAuthProvider.credentialFromError(error);
+         console.error(
+           "Error during sign-in:",
+           errorCode,
+           errorMessage,
+           email,
+           credential
+         );
           });
-      };
+    };
 
       window.signGoogle = signGoogle;
-    </script>
+  </script>
 </body>
 </html>

@@ -1,116 +1,127 @@
+
 body {
     font-family: Arial, Helvetica, sans-serif;
   }
+  .container-fluid{
+    margin-top: 100px;
+  }
+  .form{
+    text-align: center;
+  }
   
   #header{
-     padding-left: 36rem;
      font-weight: 100px;
      color: #0B6186;
+     text-align: center;
+    }
+
+   /* ICON  */
+    .nameIcon{
+      position: absolute;
+      top: 210px;
+      left: 450px;
+    }
+
+    .email{
+      position: absolute;
+      top: 290px;
+      left: 450px;
+    }
+
+   .pword{
+     position: absolute;
+     top: 365px;
+     left: 450px;
+    }
+
+    .pwords{
+      position: absolute;
+      top: 442px;
+      left: 448px;
     }
   
-    #btn{
-      width: 420px;
-      height: 50px;
+    .sign{
+      width: 36%;
       border-radius: 9px;
       border: 0;
       background-color: #0B6186;
       color: #f8fafc;
-      font-size: large;
-    } 
-
-    /* .onc:hover{
-      background-color: gray;
-    } */
-     .view{
-     width: 370px;
-     height: 35px;
-     border-radius: 10px;
-     outline: none;
-     border:2px solid #0B6186;
-     padding: 2px 10px 10px 35px;
+     display: block;
+     margin: auto;
+     justify-content: center;
+     padding: 1rem;
+     font-weight: 600;
+     font-size: 16px;
      margin-top: 30px;
-     }
+     
+    } 
+    
      ::placeholder{
-      position: absolute;
-      top: 18px;
+     font-size: 13px;
       color: #0B6186;
      }
-  
-     .view2{
-      position: absolute;
-      left: 470px;
-      top: 182px;
+     .input-box input{
+      width: 30%;
+      border-radius: 10px;
+      outline: 0;
+      padding: 0.88rem 2.5rem;
+      border: 2px solid #96bbcb;
      }
-     .email{
-      position: absolute;
-      left: 470px;
-      top: 264px;
-     }
-     .pword{
-      position: absolute;
-      left: 470px;
-      top: 345px;
-     }
-     .pwords{
-      position: absolute;
-      left: 470px;
-      top: 426px;
+     .box{
+      margin-top: 30px;
      }
      
-     .inp{
-      padding-left: 450px;
-     }
-     
-     /* #hr{
+      #hr{
       height: 3px;
       background-color: gray;
       border: 0;
       border-radius: 3px;
       width: 350px;
       margin-left: 490px;
-     } */
+     } 
   
      .flex{
       display: flex;
-      justify-content: space-around;
-      gap: 1rem;
-     }
-  
-     .pic1{
-      padding-left: 35pc;
-     }
-  
-     .pic2{
-      padding-right: 35pc;
+      margin: auto;
+      justify-content: center;
+      gap: 15rem;
      }
   
      .last{
       font-size: large;
       font-weight: 500px;
-      margin-left: 500px;
       color: #9B9999;
+      text-align: center;
+     } 
+     .last a{
+      text-decoration: none;
+     }
+     .last a:hover{
+      text-decoration: underline;
      }
      .Top{
-      margin-left: 550px;
       font-size: large;
       color: #9B9999;
+      text-align: center;
      }
      .pim{
       position: absolute;
       right: 480px;
       top: 345px;
-     }
-     .pim2{
+     } 
+
+      .pim2{
       position: absolute;
       right: 480px;
       top: 426px;
      }
+
      #orDivider{
       display: flex;
       align-items: center;
       text-align: center;
       width: 100%;
-      max-width: 300px;
+      max-width: 37%;
       margin: auto;
      }
   
@@ -120,10 +131,41 @@ body {
        height: 1px;
        background-color: #ccc;
        margin: 0 10px;
-     }
+       margin-top: 30px;
+     } 
   
      #orDivider span{
       color: #999;
       font-size: 14px;
       text-transform: uppercase;
+      margin-top: 30px;
      }
+
+        /* RESPONSIVENESS  */
+
+     @media only screen and (max-width:992px){
+    .input-box input{
+      width: 50%;
+    }
+    .flex{
+      gap: 5rem;
+    }
+     }
+     @media only screen and (max-width:1200px){
+    .input-box input{
+      width: 50%;
+    } 
+    .sign{
+      width:58%;
+    }
+    #orDivider{
+    max-width: 60%;
+    }
+     }
+
+
+     /* @media only screen and (max-width:1400px){
+    .input-box input{
+      width: 50%;
+    } 
+     } */
