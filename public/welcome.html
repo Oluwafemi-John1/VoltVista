@@ -209,11 +209,13 @@
             <hr />
           </div>
 
-          <button id="buttonCreate">Create Account</button>
+          <button onclick="createBtn()" id="buttonCreate">
+            Create Account
+          </button>
 
           <div id="signinContainer">
             <p>Already have an account?</p>
-            <button id="signInBtn">Sign in</button>
+            <button onclick="signBtn()" id="signInBtn">Sign in</button>
           </div>
         </div>
       </div>
@@ -268,6 +270,16 @@
       };
 
       window.signGoogle = signGoogle;
+    </script>
+
+    <script>
+      const createBtn = () => {
+        window.location.href = "signup.html";
+      };
+
+      const signBtn = () => {
+        window.location.href = "signin.html";
+      };
     </script>
   </body>
 </html>

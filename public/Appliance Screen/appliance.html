@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volvista | Appliance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            padding: 0;
+            margin: 0;
+            background-color: #C2F2FF;
+            box-sizing: border-box;
+        }
+
+        #mySidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+            transition: 0.5s;
+            color: #0876a5;
+            padding: 65px 10px 0px 10px;
+            box-shadow: 2px 3px 10px 0px rgb(223, 223, 223);
+        }
+
+        #mySidenav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #0876a5;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        #mySidenav a:hover, #mySidenav a.active {
+            color: #0876a5;
+            background-color: #f5f5f5;
+            padding-left: 35px;
+            border-radius: 3px;
+        }
+
+        #mySidenav a.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: #0876a5;
+        }
+
+        #toggleBtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #0876a5;
+        }
+
+        .navLink {
+            margin-top: 5px;
+        }
+
+        #dashboardLink {
+            margin-top: 20px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 20px;
+            left: 0px;
+        }
+
+        #main {
+            margin-left: 250px;
+            transition: margin-left .5s;
+            padding: 20px;
+            background-color: white;
+            padding-left: 40px;
+        }
+
+        #main2 {
+            margin-left: 250px;
+            transition: margin-left .5s;
+            padding: 20px;
+            padding-left: 40px;
+        }
+
+        .dropdownContent {
+            margin-left: 40px;
+        }
+
+        #hr {
+            border: none;
+            border-top: 1px solid #2989b3;
+        }
+
+        #secCon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #secSub1 {
+            padding: 10px;
+            width: 35%;
+            color: #0B6186;
+        }
+
+        #secSub2 {
+            padding: 10px;
+            width: 40%;
+        }
+
+        #secSub3 {
+            padding: 10px;
+            width: 15%;
+        }
+
+        #searchContainer {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px auto;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #searchInput {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-bottom: 1px solid #0B6186;
+        }
+
+        #searchButton {
+            background-color: #1578a3;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 0 20px 20px 0;
+        }
+
+        #searchButton i {
+            font-size: 18px;
+        }
+
+        #searchButton:hover {
+            background-color: #0B6186;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #mySidenav {
+                width: 200px;
+            }
+
+            #main, #main2 {
+                margin-left: 220px;
+            }
+
+            #mySidenav a {
+                font-size: 16px;
+            }
+
+            #secSub3 {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #mySidenav {
+                width: 150px;
+                padding-top: 15px;
+            }
+
+            #main, #main2 {
+                margin-left: 170px;
+            }
+
+            #mySidenav a {
+                font-size: 16px;
+                padding-left: 16px;
+            }
+
+            .linkText {
+                display: none;
+            }
+
+            #toggleBtn {
+                top: 15px;
+                right: 15px;
+            }
+
+            #logo {
+                visibility: hidden;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #mySidenav {
+                width: 50px;
+                padding-top: 15px;
+            }
+
+            #main, #main2 {
+                margin-left: 70px;
+            }
+
+            #mySidenav a {
+                font-size: 16px;
+                padding-left: 15px;
+            }
+
+            .linkText {
+                display: none;
+            }
+
+            #toggleBtn {
+                top: 15px;
+                right: 15px;
+            }
+
+            #logo {
+                display: none;
+            }
+
+            #searchInput {
+                width: 40%;
+            }
+
+            #secNotification, #secProfile {
+                width: 10%;
+            }
+        }
+
+        .iconOnly {
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .linkText {
+            margin-left: 15px;
+        }
+
+        .dropdownContent {
+            display: none;
+            flex-direction: column;
+        }
+
+        .dropdown:hover .dropdownContent {
+            display: flex;
+        }
+
+        #mainLogo {
+            margin-left: -40px;
+            display: none;
+        }
+
+        @media screen and (max-width: 960px) {
+            #secSub1 {
+                width: 100%;
+            }
+
+            #secSub2 {
+                width: 70%;
+            }
+
+            #secSub3 {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 770px) {
+            #secSub2 {
+                width: 100%;
+            }
+
+            #secSub3 {
+                width: 100%;
+            }
+
+            #secNotification, #secProfile {
+                width: 50%;
+            }
+
+            #mainLogo {
+                display: block;
+            }
+
+            #logo {
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+<div id="mySidenav">
+    <div id="toggleBtn" onclick="toggleNav()"><i class="fas fa-caret-left"></i></div>
+    <div id="logo"><img src="pliancesImages/logo.svg" alt="logo"></div>
+    <a href="#" id="dashboardLink" class="navLink"><img src="pliancesImages/Dashboard.svg" alt="dashboard"><span class="linkText">Dashboard</span></a>
+    <a href="#" id="profileLink" class="navLink"><img src="pliancesImages/profile.svg" alt="profile"><span class="linkText">Profile</span></a>
+    <a href="#" id="notificationLink" class="navLink"><img src="pliancesImages/Notification.svg" alt="notification"><span class="linkText">Notification</span></a>
+    <a href="#" id="addAppliancesLink" class="navLink"><img src="pliancesImages/add appliance.svg" alt="addAppliance"><span class="linkText">Add Appliances</span></a>
+    <a href="#" id="billingLink" class="navLink"><img src="pliancesImages/billing.svg" alt="billing"><span class="linkText">Billing</span></a>
+    <a href="#" id="switchAccountLink" class="navLink"><img src="pliancesImages/switch account.svg" alt="switchAccount"><span class="linkText">Switch Account</span></a>
+    <hr id="hr">
+    <div class="dropdown">
+        <a href="#" id="settingsLink" class="navLink"><img src="pliancesImages/setting.svg" alt="setting"><span class="linkText">Settings</span></a>
+        <div class="dropdownContent">
+            <a href="#" id="subSetting1Link">Sub Setting 1</a>
+            <a href="#" id="subSetting2Link">Sub Setting 2</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="#" id="helpLink" class="navLink"><img src="pliancesImages/help.svg" alt="help"><span class="linkText">Help</span></a>
+        <div class="dropdownContent">
+            <a href="#" id="subHelp1Link">Sub Help 1</a>
+            <a href="#" id="subHelp2Link">Sub Help 2</a>
+        </div>
+    </div>
+    <a href="#" id="logOutLink" class="navLink"><img src="pliancesImages/logout.svg" alt="logout"><span class="linkText">Log Out</span></a>
+</div>
+
+<section id="main">
+    <div id="secCon">
+        <div id="secSub1">
+            <div id="mainLogo"><img src="pliancesImages/logo.svg" alt="mainLogo"></div>
+            <h2 style="margin-bottom: -6px;">Appliances</h2>
+            <p>Hi, Evelyn. Welcome back.</p>
+        </div>
+        <div id="secSub2">
+            <div class="searchContainer">
+                <input type="text" class="searchInput" id="searchInput" placeholder="Search...">
+                <button class="searchButton" id="searchButton"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div id="secSub3">
+            <div style="display: flex; justify-content: space-between;">
+                <div id="secNotification" style="width: 40%;"><img src="pliancesImages/notification2.svg" alt=""></div>
+                <div id="secProfile" style="width: 30%; background-color: #0876a5; border-radius: 50%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="main2"></div>
+
+<script>
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        const main = document.getElementById("main");
+        const main2 = document.getElementById("main2");
+        const toggleBtn = document.getElementById("toggleBtn").querySelector("i");
+        const logo = document.getElementById("logo");
+
+        if (sidenav.style.width === "250px" || sidenav.style.width === "") {
+            sidenav.style.width = "50px";
+            main.style.marginLeft = "70px";
+            main2.style.marginLeft = "70px";
+            document.querySelectorAll('#mySidenav a').forEach(link => link.classList.add('iconOnly'));
+            document.querySelectorAll('.linkText').forEach(text => text.style.display = 'none');
+            toggleBtn.classList.replace('fa-bars', 'fa-angle-right');
+            logo.style.display = 'none';
+        } else {
+            sidenav.style.width = "250px";
+            main.style.marginLeft = "280px";
+            main2.style.marginLeft = "280px";
+            document.querySelectorAll('#mySidenav a').forEach(link => link.classList.remove('iconOnly'));
+            document.querySelectorAll('.linkText').forEach(text => text.style.display = 'inline');
+            toggleBtn.classList.replace('fa-angle-right', 'fa-bars');
+            logo.style.display = 'block';
+        }
+    }
+
+    document.querySelectorAll('#mySidenav a.navLink').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('#mySidenav a.navLink').forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // hide the link text and set the sidebar to collapsed for responsive view
+    if (window.innerWidth <= 768) {
+        toggleNav();
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            toggleNav();
+        } else {
+            if (document.getElementById("mySidenav").style.width === "50px") {
+                toggleNav();
+            }
+        }
+    });
+</script>
+</body>
+</html>
