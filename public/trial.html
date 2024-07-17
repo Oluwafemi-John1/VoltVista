@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+  }
+  .side-nav {
+    height: 70%;
+    width: 20%;
+    border: 1px solid white;
+    box-shadow: 0px 1px 4px black;;
+  }
+  .Volvista-img{
+    height: 40px;
+  }
+  .Dashboard-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    height: 20px;
+  }
+  .dash1{
+    margin-top: 30px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .profile-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash2{
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .notification-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash3{
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .additems-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash4{
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .billing-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash5{
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .rec{
+    margin-right: 20px;
+    height: 25px;
+  }
+  .switchuser-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash6{
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .line{
+    margin-left: 19px;
+    margin-top: 15px;
+    height: 3px;
+    width: 200px;
+    background-color: #0b6186;
+  }
+  .settings-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash7{
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .arrow{
+    position: absolute;
+    margin-left: 5px;
+  }
+  .log-txt{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #0b6186;
+    margin-left: 10px;
+  }
+  .Dashboard-img{
+    
+  }
+  .dash8{
+    padding-bottom: 50px;
+    margin-top: 20px;
+    margin-left: 25px;
+    align-items: center;
+    display: flex;
+  }
+  .arrow{
+    position: absolute;
+    margin-left: 5px;
+  }
+  .nav{
+    position: absolute;
+    margin-left: 275px;
+    margin-top: 0px;
+    height: 12%;
+    width: 79.7%;
+    border: 1px solid white;
+    box-shadow: 0px 0px 4px black;;    
+  }
+  .billing-txt2{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 25px;
+    color: #0b6186;
+    margin-left: 50px;
+    margin-top: 20px;
+    
+  }
+  .welcome-bck{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 13px;
+    color: #0b6186;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  .search-nav{
+    border-radius: 17px;
+    height: 27px;
+    width: 230px;
+    outline-width: 0;
+    text-align: center;
+  border: 1px solid #0b6186;  
+  }
+ .search-nav ::placeholder{
+    position: absolute;
+    margin-left: 50px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 13px;
+    color: #0b6186;
+  }
+  .imgsearch-nav{
+    height: 15px;
+    margin-left: 13px;
+    margin-top: 6px;
+    position: absolute;
+    
+  }
+  .search-div{
+    margin-top: -40px;
+    margin-left: 600px;
+  }
+  .noti-frme{
+    margin-top: -30px;
+    margin-left: 950px;
+  }
+  .notis1{
+    height: 30px;
+  }
+  .body-img{
+    margin-top: 180px;
+    position: absolute;
+    margin-left: 500px;
+    height: 350px;
+  }
+  .bodytxt1{
+    position: absolute;
+    margin-left: 850px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    margin-top: 150px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 19px;
+    color: black;
+  } 
+  .bodytxt2{
+    position: absolute;
+    margin-left: 850px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin-top: 220px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #656565;
+  }
+  .bodytxt3{
+    position: absolute;
+    margin-left: 850px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin-top: 250px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #656565;
+  }
+  .select1{
+    outline-width: 0;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 270px;
+    height: 30px;
+    width: 250px;
+    border: 1px solid #0b6186;
+  }
+  .bodytxt4{
+    position: absolute;
+    margin-left: 850px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin-top: 310px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #656565;
+  }
+  .select2{
+    align-items: center;
+    text-align: center;
+    outline-width: 0;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 330px;
+    height: 30px;
+    width: 250px;
+    border: 1px solid #0b6186;
+  }
+  .bodytxt5{
+    position: absolute;
+    margin-left: 850px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin-top: 370px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #656565;
+  }
+  .select3{
+    align-items: center;
+    text-align: center;
+    outline-width: 0;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 395px;
+    height: 30px;
+    width: 250px;
+    border: 1px solid #0b6186;
+  }
+  .bodytxt6{
+    position: absolute;
+    margin-left: 850px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin-top: 430px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #656565;
+  }
+  .select4{
+    align-items: center;
+    text-align: center;
+    outline-width: 0;
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 455px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid #0b6186;
+  }
+  .bodytxt7{
+    position: absolute;
+    margin-left: 1000px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    margin-top: 430px;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 12px;
+    color: #656565;
+  }
+  .select5{
+    position: absolute;
+    margin-top: 454px;
+    margin-left: 1000px;
+     align-items: center;
+    text-align: center;
+    outline-width: 0;
+    position: absolute;
+    height: 30px;
+    width: 100px; 
+    border: 1px solid #0b6186;
+  }
+  
+
+
+</style>
+<body>
+  <div class="container">
+        <div class="navbar">
+          <div class="nav">
+              <h2 class="billing-txt2">Billing</h2>
+              <span class="welcome-bck">Hi, User. Welcome back.</span>
+
+              <div class="search-div">
+                <img class="imgsearch-nav" src="circum_search.png" alt="">
+                <input placeholder="Search"  class="search-nav" type="search">
+              </div>
+
+              <div class="noti-frme">
+                <img class="notis1" src="notification.png" alt="">
+                <img class="notis1" src="Frame 48.png" alt="">
+              </div>
+          </div>
+          
+        </div>
+             <div class="body-div">
+                <div>
+                  <h2 class="bodytxt1">A step closer to getting <br> 
+                    your units!!!!</h2>
+                    <span class="bodytxt2">Finalize payment by inputing your details</span>
+                    <span class="bodytxt3">Payment method</span>
+                    <select class="select1" name="" id="">
+                      <img src="paymentopt.png" alt="">
+                      <option value="">Debit/Credit card</option>
+                    </select>
+                    <span class="bodytxt4">Cardholder name</span>
+                    <input placeholder="User" class="select2" type="text">
+                    <span class="bodytxt5">Cardholder name</span>
+                    <input placeholder="3596 2267 0020 2013" class="select3" type="text">
+                    <div style="display: flex;">
+                      <span class="bodytxt6">Expiry</span>
+                      <input class="select4" type="date" name="" id="">
+                      <span class="bodytxt7">Cvv</span>
+                      <input placeholder="123" class="select5" type="number" name="" id="">
+                    </div> 
+                    
+                </div>
+                <div>
+                  <img class="body-img" src="image 9.png" alt="">
+
+                </div>
+            </div>
+
+
+
+
+      <div class="side-nav">
+         <img class="Volvista-img" src="Frame 285.png" alt="">
+         
+         <div>
+              <div class="dash1">
+                <div><img class="Dashboard-img" src="mdi-light_view-dashboard.png" alt=""></div> <div> <span class="Dashboard-txt">Dashboard</span></div>
+              </div>
+              <div class="dash2">
+                <div><img class="Dashboard-img" src="iconamoon_profile-thin.png" alt=""></div> <div> <span class="profile-txt">Profile</span></div>
+              </div>
+              <div class="dash3">
+                <div><img class="Dashboard-img" src="clarity_notification-line.png" alt=""></div> <div> <span class="notification-txt">Notification</span></div>
+              </div>
+              <div class="dash4">
+                <div><img class="Dashboard-img" src="arcticons_fpt-tv-remote.png" alt=""></div> <div> <span class="additems-txt">Add Appliance</span></div>
+              </div>
+              <div class="dash5">
+                <div><img class="rec" src="Rectangle 18.png" alt=""><img class="Dashboard-img" src="fluent_payment-28-regular.png" alt=""></div> <div> <span class="billing-txt">Billing</span></div>
+              </div>
+              <div class="dash6">
+                <div><img class="Dashboard-img" src="fluent-mdl2_switch-user.png" alt=""></div> <div> <span class="switchuser-txt">Switch Account</span></div>
+              </div>
+              <div class="line"></div>
+              <div class="dash7">
+                <div><img class="Dashboard-img" src="arcticons_settings.png" alt=""></div> <div> <span class="settings-txt">Settings</span><img class="arrow" src="iconamoon_arrow-up-2-thin.png" alt=""></div>
+              </div>
+              <div class="dash8">
+                <div><img class="Dashboard-img" src="carbon_logout.png" alt=""></div> <div> <span class="log-txt">Log Out</span><img class="arrow" src="iconamoon_arrow-up-2-thin.png" alt=""></div>
+              </div>
+         </div>
+      </div>
+  </div>
+</body>
+</html>
